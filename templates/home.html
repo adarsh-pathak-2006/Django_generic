@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}HOME{% endblock title %}
+
+{% block content %}
+
+{% for p in product %}
+<h4>{{ p.name }}</h4>
+<p>{{ p.description }}</p>
+{{ p.price }}
+<a href="{% url "individual" p.id %}">Read-More</a>
+{% endfor %}
+
+{% endblock content %} 
